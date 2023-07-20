@@ -1,0 +1,38 @@
+@import '../styles/variables';
+
+.button {
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  color: $soft-white;
+
+  &--style {
+    &-primary {
+      background-color: $violet;
+
+      &:hover {
+        background-color: $soft-violet;
+      }
+    }
+
+    &-secondary {
+      background-color: $indigo;
+
+      &:hover {
+        background-color: $soft-indigo;
+      }
+    }
+
+    &-tertiary {
+      background-color: $cobalt;
+
+      &:hover {
+        background-color: $soft-cobalt;
+      }
+    }
+
+    &-naked {
+      background-color: transparent;
+    }
+  }
+}
