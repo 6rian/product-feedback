@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import Button from '../components/Button'
-import { ButtonStyle } from '../components/Button'
 
 const meta = {
   title: 'Atoms/Button',
@@ -10,19 +9,19 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    // text: 'Button',
-    text: 'Vestibulum volutpat acus a ultrices sagittis',
+    text: 'Button',
   },
   argTypes: {
     style: {
       options: [
-        ButtonStyle.Primary,
-        ButtonStyle.Secondary,
-        ButtonStyle.Tertiary,
-        ButtonStyle.Naked,
+        'primary',
+        'secondary',
+        'tertiary',
+        'naked',
       ]
     }
-  }
+  },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -30,24 +29,31 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    style: ButtonStyle.Primary
+    style: 'primary',
   }
 }
 
 export const Secondary: Story = {
   args: {
-    style: ButtonStyle.Secondary
+    style: 'secondary',
   }
 }
 
 export const Tertiary: Story = {
   args: {
-    style: ButtonStyle.Tertiary
+    style: 'tertiary',
   }
 }
 
 export const Naked: Story = {
   args: {
-    style: ButtonStyle.Naked
+    style: 'naked',
   }
 }
+
+export const Back: Story = {
+  args: {
+    back: true,
+  }
+}
+

@@ -1,21 +1,30 @@
+import Image from 'next/image';
+import BackIcon from '../images/back.svg'
 import './button.scss'
 
-export enum ButtonStyle {
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Tertiary = 'tertiary',
-  Naked = 'naked',
-}
-
 interface ButtonProps {
-  style: ButtonStyle;
+  /**
+   * Style variant
+   */
+  style?: 'primary' | 'secondary' | 'tertiary' | 'naked';
+  /**
+   * Button text content
+   */
   text: string;
+  /**
+   * Is back button?
+   */
+  back?: boolean;
+  /**
+   * Click handler
+   */
   onClick?: () => void;
 }
 
 export default function Button({
-  style = ButtonStyle.Primary,
+  style = 'primary',
   text,
+  back = false,
   ...props
 }: ButtonProps) {
   return (
@@ -24,6 +33,13 @@ export default function Button({
       className={`button button--style-${style}`}
       {...props}
     >
+      {back && (
+        <div>
+          {/* <Image src={backIcon} alt="Go Back" /> */}
+          {/* <img src={backIcon} alt="Go Back" /> */}
+          <BackIcon />
+        </div>
+      )}
       {text}
     </button>
   )

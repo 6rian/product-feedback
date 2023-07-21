@@ -30,6 +30,7 @@
     "@storybook/nextjs": "^7.1.0",
     "@storybook/react": "^7.1.0",
     "@storybook/testing-library": "^0.2.0",
+    "@svgr/webpack": "^8.0.1",
     "eslint-plugin-storybook": "^0.6.13",
     "sass": "^1.64.0",
     "storybook": "^7.1.0"
