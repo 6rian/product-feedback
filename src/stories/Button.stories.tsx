@@ -10,7 +10,8 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    text: 'Button',
+    // text: 'Button',
+    text: 'Vestibulum volutpat acus a ultrices sagittis',
   },
   argTypes: {
     style: {
