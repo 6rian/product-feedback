@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import BackIcon from '../images/back.svg'
 import './button.scss'
 
@@ -34,11 +33,7 @@ export default function Button({
       {...props}
     >
       {back && (
-        <div>
-          {/* <Image src={backIcon} alt="Go Back" /> */}
-          {/* <img src={backIcon} alt="Go Back" /> */}
-          <BackIcon />
-        </div>
+        <BackIcon />
       )}
       {text}
     </button>

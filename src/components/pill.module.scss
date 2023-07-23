@@ -1,0 +1,21 @@
+@import '../styles/variables';
+
+.pill {
+  background-color: $pale-indigo;
+  border-radius: 0.625rem;
+  padding: 0.3125rem 1rem;
+  color: $indigo;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &--active {
+    background-color: $indigo;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $med-indigo;
+    color: $indigo;
+  }
+}
