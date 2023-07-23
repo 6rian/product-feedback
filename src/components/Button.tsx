@@ -1,5 +1,5 @@
 import BackIcon from '../images/back.svg'
-import './button.scss'
+import styles from './button.module.scss'
 
 interface ButtonProps {
   /**
@@ -26,15 +26,17 @@ export default function Button({
   back = false,
   ...props
 }: ButtonProps) {
+  const classes = [
+    styles.button,
+    styles[`button--style-${style}`]
+  ]
   return (
     <button
       type="button"
-      className={`button button--style-${style}`}
+      className={classes.join(' ')}
       {...props}
     >
-      {back && (
-        <BackIcon />
-      )}
+      {back && <BackIcon />}
       {text}
     </button>
   )
