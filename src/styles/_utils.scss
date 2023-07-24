@@ -11,3 +11,11 @@
     @content;
   }
 }
+
+@mixin svg-stroke($color) {
+  svg {
+    path {
+      stroke: $color;
+    }
+  }
+}

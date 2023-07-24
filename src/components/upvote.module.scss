@@ -1,0 +1,37 @@
+@import '../styles/variables';
+@import '../styles/utils';
+
+.upvote {
+  background-color: $pale-indigo;
+  color: $cobalt;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    padding: 0.875rem 0.75rem 0.5rem 0.75rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &:hover,
+  &--active:hover {
+    background-color: $med-indigo;
+    color: $cobalt;
+    @include svg-stroke($cobalt);
+  }
+
+  &--active {
+    background-color: $indigo;
+    color: $white;
+    @include svg-stroke($white);
+  }
+}

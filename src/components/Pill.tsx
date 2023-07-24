@@ -2,7 +2,7 @@ import styles from './pill.module.scss'
 
 interface PillProps {
   /**
-   * Button text content
+   * Text content
    */
   text: string;
   /**
