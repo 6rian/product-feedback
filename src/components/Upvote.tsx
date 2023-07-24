@@ -9,7 +9,7 @@ interface UpvoteProps {
   /**
    * Is active?
    */
-  active: boolean;
+  active?: boolean;
   /**
    * Click handler
    */
@@ -18,12 +18,12 @@ interface UpvoteProps {
 
 export default function Upvote({
   count,
-  active,
+  active = false,
   ...props
 }: UpvoteProps) {
   const classes = [
     styles.upvote,
-    active && styles['upvote--active'],
+    active ? styles['upvote--active'] : '',
   ]
   return (
     <div className={classes.join(' ')}>

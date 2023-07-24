@@ -8,6 +8,7 @@
   font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
+  max-width: max-content;
 
   &--active {
     background-color: $indigo;

@@ -8,7 +8,7 @@ interface PillProps {
   /**
    * Is active?
    */
-  active: boolean;
+  active?: boolean;
   /**
    * Click handler
    */
@@ -17,12 +17,12 @@ interface PillProps {
 
 export default function Pill({
   text,
-  active,
+  active = false,
   ...props
 }: PillProps) {
   const classes = [
     styles.pill,
-    active && styles['pill--active'],
+    active ? styles['pill--active'] : '',
   ]
   return (
     <div className={classes.join(' ')}>
