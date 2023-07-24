@@ -1,0 +1,11 @@
+@import '../styles/variables';
+
+.comments-count {
+  color: $cobalt;
+  font-size: 0.8125rem;
+  font-weight: 700;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
