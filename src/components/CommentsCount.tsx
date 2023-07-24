@@ -1,4 +1,4 @@
-import BubbleIcon from '../images/comment-bubble.svg'
+import BubbleIcon from '../images/icons/icon-comments.svg'
 import styles from './commentscount.module.scss'
 
 interface CommentsCountProps {

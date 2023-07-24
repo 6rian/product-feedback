@@ -1,4 +1,4 @@
-import UpIcon from '../images/up-arrow.svg'
+import UpIcon from '../images/icons/icon-arrow-up.svg'
 import styles from './upvote.module.scss'
 
 interface UpvoteProps {

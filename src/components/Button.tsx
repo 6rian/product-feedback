@@ -1,4 +1,4 @@
-import BackIcon from '../images/left-arrow.svg'
+import BackIcon from '../images/icons/icon-arrow-left.svg'
 import styles from './button.module.scss'
 
 interface ButtonProps {
