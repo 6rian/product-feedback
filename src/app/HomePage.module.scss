@@ -3,8 +3,25 @@
 
 $menu-height: calc(100vh - 4.5rem);
 
+.main {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 255px auto;
+    gap: pxToRem(30);
+  }
+}
+
 .header {
   position: relative;
+
+  @include tablet {
+    display: flex;
+    gap: pxToRem(10);
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .menu {
@@ -12,6 +29,11 @@ $menu-height: calc(100vh - 4.5rem);
   left: 100%;
   background-color: rgba(0,0,0,0.5);
   transition: all .5s ease;
+
+  @include tablet {
+    position: static;
+    background-color: transparent;
+  }
 
   [data-menu="open"] & {
     right: 0;
@@ -27,6 +49,20 @@ $menu-height: calc(100vh - 4.5rem);
   height: $menu-height;
   margin-left: auto;
   padding: 1rem;
+
+  @include tablet {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    gap: pxToRem(10);
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .banner {
@@ -34,17 +70,28 @@ $menu-height: calc(100vh - 4.5rem);
   color: $white;
   padding: 1rem 1.5rem;
 
+  @include tablet {
+    width: pxToRem(223);
+    height: pxToRem(178);
+  }
+
+  @include desktop {
+    width: pxToRem(255);
+    height: pxToRem(137);
+  }
+
   display: flex;
   justify-content: space-between;
 
   h1 {
-    font-size: 0.9375rem;
+    font-size: pxToRem(15);
     font-weight: 700;
     letter-spacing: -0.01169rem;
   }
 
   p {
-    font-size: 0.8125rem;
+    font-size: pxToRem(13);
     font-weight: 500;
   }
 }
+
