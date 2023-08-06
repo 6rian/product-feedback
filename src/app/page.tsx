@@ -1,16 +1,11 @@
+import Banner from '@/components/Banner'
 import styles from './HomePage.module.scss'
 
 export default function HomePage() {
   return (
     <main className={styles.main}>
       <header className={styles.header} data-menu="closed">
-        <div className={styles.banner}>
-          <div>
-            <h1>Frontend Mentor</h1>
-            <p>Feedback Board</p>
-          </div>
-          <span>menu</span>
-        </div>
+        <Banner />
         <aside className={styles.menu}>
           <div className={styles['menu-inner']}>
             <div>categories</div>

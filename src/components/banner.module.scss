@@ -1,0 +1,33 @@
+@import '../styles/variables';
+@import '../styles/utils';
+
+.banner {
+  background: radial-gradient(166.82% 166.82% at 103.90% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+  color: $white;
+  padding: 1rem 1.5rem;
+
+  @include tablet {
+    width: pxToRem(223);
+    height: pxToRem(178);
+  }
+
+  @include desktop {
+    width: pxToRem(255);
+    height: pxToRem(137);
+  }
+
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: pxToRem(15);
+    font-weight: 700;
+    letter-spacing: -0.01169rem;
+  }
+
+  p {
+    font-size: pxToRem(13);
+    font-weight: 500;
+  }
+}
+
