@@ -29,6 +29,7 @@ $menu-height: calc(100vh - 4.5rem);
   left: 100%;
   background-color: rgba(0,0,0,0.5);
   transition: all .5s ease;
+  display: none;
 
   @include tablet {
     position: static;
@@ -36,6 +37,7 @@ $menu-height: calc(100vh - 4.5rem);
   }
 
   [data-menu="open"] & {
+    display: block;
     right: 0;
     left: 0;
     height: $menu-height;
