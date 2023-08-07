@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner'
+import SuggestionsBar from '@/components/SuggestionsBar'
 import styles from './HomePage.module.scss'
 
 export default function HomePage() {
@@ -14,9 +15,10 @@ export default function HomePage() {
         </aside>
       </header>
       <div>
-        <div className={styles['suggestions-bar']}>
-          insert SuggestionsBar component here
-        </div>
+        {/* <div className={styles['suggestions-bar']}> */}
+        {/*   insert SuggestionsBar component here */}
+        {/* </div> */}
+        <SuggestionsBar />
         <div className={styles['suggestions-list']}>
           insert SuggestionsList component here
         </div>

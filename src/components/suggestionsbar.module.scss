@@ -1,0 +1,29 @@
+@import '../styles/variables';
+@import '../styles/utils';
+
+.suggestionsBar {
+  background-color: $dark-cobalt; 
+  color: $white;
+  padding: pxToRem(8) pxToRem(24);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    padding: pxToRem(14) pxToRem(16);
+    border-radius: pxToRem(10);
+  }
+}
+
+.count {
+  display: none;
+  gap: 1rem;
+  font-size: pxToRem(18);
+  font-weight: 700;
+  letter-spacing: pxToRem(-0.25);
+
+  @include tablet {
+    display: flex;
+  }
+}

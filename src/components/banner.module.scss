@@ -9,6 +9,7 @@
   @include tablet {
     width: pxToRem(223);
     height: pxToRem(178);
+    border-radius: pxToRem(10);
   }
 
   @include desktop {
